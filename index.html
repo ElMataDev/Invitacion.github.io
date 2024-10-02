@@ -1,79 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación Digital</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Video de Canva - Elin Zoe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 177.7778%;
+            box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
+            margin-top: 1.6em;
+            margin-bottom: 0.9em;
+            overflow: hidden;
+            border-radius: 8px;
+            will-change: transform;
+        }
+        .video-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        /* Botón invisible inicialmente */
+        .invisible-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Oculto inicialmente */
+            z-index: 10;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="swing-container">
-        <div class="rope"></div>
-        <img src="img/image001.png" class="left-image image-swing" alt="Imagen colgante">
-    </div>
-      
-
-    <div class="info-box">
-        <h1 class="name">Nombre</h1>
-        <h2 class="day">Sábado</h2>
-        <h1 class="date">6. febrero.2024</h1>
-        <h3 class="ubicacion">Ubicacion</h3>
-    </div>
-      
-
-    <!-- Estilo para el recuadro del lugar y la hora -->
-    <div class="location-box">
-        <h2 class="location">Lugar: Salon de eventos, México, Sonora</h2>
-        <h3 class="time">Hora: 11:00 AM</h3>
+    <div class="video-container">
+        <iframe loading="lazy" src="https://www.canva.com/design/DAGSTS1KOfQ/_xZgGwi_I3CHr41gbIMEEA/watch?embed"
+            allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+        <!-- Botón que aparece a los 8 segundos -->
+        <button id="invisibleButton" class="invisible-button" onclick="window.location.href='https://www.canva.com';">
+            Ir a Canva
+        </button>
     </div>
 
-    <div class="location-box-btn">
-        <button class="confirm-btn" id="confirmBtn">Confirmar asistencia</button>
-    </div>
-
-  <!-- Popup de confirmación con el formulario -->
-  <div class="popup" id="popupForm">
-    <div class="popup-content">
-      <span class="close-btn" id="closeBtn">&times;</span>
-      <h3>Confirmación de asistencia</h3>
-      <form>
-        <label for="guestName">Nombre del invitado:</label>
-        <input type="text" id="guestName" name="guestName" required>
-        <button type="submit" class="submit-btn">Enviar</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Contenedor de las barras alineadas a la derecha -->
-  <div class="barras">
-    <div class="barra" id="barra1">
-      <div class="particles-container" id="particles1"></div>
-    </div>
-    <div class="barra" id="barra2">
-      <div class="particles-container" id="particles2"></div>
-    </div>
-    <div class="barra" id="barra3">
-      <div class="particles-container" id="particles3"></div>
-    </div>
-    <div class="barra" id="barra4">
-      <div class="particles-container" id="particles4"></div>
-    </div>
-    <div class="barra" id="barra5">
-      <div class="particles-container" id="particles5"></div>
-    </div>
-  </div>
-
-  <!-- Scripts de Bootstrap y JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <!-- particles.js lib -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  
-  <script src="script.js"></script>
+    <script>
+        // Función para mostrar el botón después de 8 segundos
+        setTimeout(function() {
+            document.getElementById("invisibleButton").style.display = "block";
+        }, 8000); // 8000 ms = 8 segundos
+    </script>
 
 </body>
 </html>
